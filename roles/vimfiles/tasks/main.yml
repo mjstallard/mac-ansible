@@ -33,7 +33,7 @@
 
 - name: Install Neovim
   homebrew:
-    name: neovim/neovim/neovim
+    name: neovim
     state: latest
   tags:
     - vimfiles
