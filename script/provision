@@ -9,6 +9,7 @@ major=`echo $version | cut -d. -f1`
 minor=`echo $version | cut -d. -f2`
 PATH=/usr/local/opt/python/libexec/bin:$PATH
 PATH=$HOME/Library/Python/${major}.${minor}/bin/:$PATH
-time ansible-playbook --diff $@
+echo "Please enter your user's password for installation steps that require sudo:"
+time ansible-playbook --ask-become-pass --diff $@
 
 # vim: ft=sh:
