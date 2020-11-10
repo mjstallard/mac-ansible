@@ -26,6 +26,7 @@ brew_base_packages:
   - name: fzf
   - name: gettext
   - name: git
+  - name: git-delta
   - name: git-duet
   - name: git-extras
   - name: git-lfs
@@ -35,8 +36,6 @@ brew_base_packages:
   - name: gnu-tar
   - name: graphviz
   - name: hadolint
-  - name: hashicorp/tap/waypoint
-  - name: heroku
   - name: hub
   - name: inetutils
   - name: jq
@@ -59,6 +58,7 @@ brew_base_packages:
   - name: nomad
   - name: opam
   - name: packer
+  - name: prettyping
   - name: protobuf
   - name: reattach-to-user-namespace
   - name: readline
@@ -66,39 +66,40 @@ brew_base_packages:
   - name: s3cmd
   - name: snappy
   - name: sqlite
+  - name: speedtest-cli
   - name: starship
-  - name: terraform
   - name: thefuck
   - name: the_silver_searcher
   - name: tmate
   - name: tree
-  - name: vault
+  - name: watch
   - name: watchman
   - name: wget
   - name: xhyve
   - name: yarn
 brew_cask_applications:
+  - name: 1password
   - name: alfred
   - name: appzapper
-  - name: arduino
   - name: atom
   - name: bartender
   - name: caffeine
   - name: firefox
-  - name: flux
   - name: google-chrome
   # TODO: Requires password, become sudo
   - name: gpg-suite
   - name: harvest
   - name: imagealpha
   - name: imageoptim
+  - name: intellij-idea
   - name: istat-menus
   - name: iterm2
   - name: keybase
   - name: little-snitch
-  - name: nordvpn
+  - name: shiftit
+  - name: slack
   - name: spotify
-  - name: sublime-text
+  - name: tandem
   - name: the-unarchiver
   - name: time-out
   - name: tor-browser
@@ -108,11 +109,6 @@ brew_cask_applications:
   - name: virtualbox
   - name: viscosity
   - name: visual-studio-code
-  - name: vmware-fusion
-  - name: vlc
-  - name: whatsapp
 brew_taps:
   - name: git-duet/tap
   - name: homebrew/cask-versions
-  - name: heroku/brew
-  - name: hashicorp/tap
