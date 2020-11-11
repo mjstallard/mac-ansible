@@ -109,6 +109,7 @@ brew_cask_applications:
   - name: virtualbox
   - name: viscosity
   - name: visual-studio-code
+  - name: zoomus
 brew_taps:
   - name: git-duet/tap
   - name: homebrew/cask-versions
