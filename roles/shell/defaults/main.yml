@@ -12,7 +12,6 @@ shell_fisherman_packages:
   - edc/bass
   - oh-my-fish/foreign-env
   - oh-my-fish/plugin-aws
-  - oh-my-fish/plugin-direnv
   - oh-my-fish/plugin-osx
   - oh-my-fish/plugin-thefuck
   - oh-my-fish/theme-scorphish
