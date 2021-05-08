@@ -100,6 +100,7 @@ brew_cask_applications:
   - name: slack
   - name: spotify
   - name: tandem
+  - name: the-clock
   - name: the-unarchiver
   - name: time-out
   - name: tor-browser
