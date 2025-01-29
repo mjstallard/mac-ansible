@@ -38,7 +38,7 @@ brew_base_packages:
 #  - name: hub
 #  - name: inetutils
 #  - name: jenv
-#  - name: jq
+  - name: jq
 #  - name: kubectl
 #  - name: libevent
 #  - name: libffi
