@@ -3,6 +3,10 @@
 # Sets up requirements to provision with ansible
 #
 
+set -e
+set -o pipefail
+set -u
+
 #
 # Clean display function
 #
@@ -13,29 +17,85 @@ function display() {
     echo "----> $1"
 }
 
-if [ ! `which brew` ]; then
+# Ensure Homebrew's path is in the environment
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Check if Homebrew is installed
+if ! command -v brew &>/dev/null; then
     display "Installing Homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-PATH=/usr/local/bin:$PATH
-PATH=/opt/homebrew/bin:$PATH
-brew_prefix=`/opt/homebrew/bin/brew --prefix`
-if [ ! `which python3 | grep -E "^${brew_prefix}"` ]; then
-  display "Installing python3 from homebrew"
-  brew install python@3
+# Ensure Python is installed via Homebrew
+brew_prefix=$(brew --prefix)
+if ! command -v python3 &>/dev/null || ! python3 --version | grep -qE "^Python 3"; then
+    display "Installing python3 from Homebrew"
+    brew install python@3
 fi
 
-PATH=/opt/homebrew/opt/python/libexec/bin/:$PATH
-if [ ! `which pip` ]; then
-    display "Installing pip"
-    python3 -m ensurepip --upgrade --user
-    pip3 install --upgrade pip
-fi
+# Set PATH to prioritize Homebrew Python
+export PATH="${brew_prefix}/opt/python@3/bin:$PATH"
 
-PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+# Ensure `pkg-config` and `libffi` are installed
+display "Installing required system dependencies"
 brew install pkg-config libffi
-pip3 install --user --upgrade -r requirements.txt
 
+# Safely initialize PKG_CONFIG_PATH
+if [ -z "${PKG_CONFIG_PATH+x}" ]; then
+    export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+else
+    export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
+fi
+
+# Ensure pipenv is installed via Homebrew
+if ! command -v pipenv &>/dev/null; then
+    display "Installing pipenv via Homebrew"
+    brew install pipenv
+fi
+
+# Create a virtual environment for Python dependencies
+venv_dir="ansible_venv"
+if [ ! -d "$venv_dir" ]; then
+    display "Creating a Python virtual environment in ${venv_dir}"
+    python3 -m venv "$venv_dir"
+fi
+
+# Activate the virtual environment
+# shellcheck disable=SC1091
+source "${venv_dir}/bin/activate"
+
+
+# Upgrade pip in the virtual environment
+display "Upgrading pip in the virtual environment"
+pip install --upgrade pip
+
+# Sync requirements.txt with Pipfile if Pipfile exists
+# Sync requirements.txt with Pipfile if Pipfile exists
+display "Pipfile detected. Ensuring Pipfile.lock is up-to-date"
+
+# Temporarily ignore active virtual environment to allow Pipenv to operate correctly
+PIPENV_IGNORE_VIRTUALENVS=1 pipenv lock
+
+display "Generating requirements.txt from Pipfile.lock"
+PIPENV_IGNORE_VIRTUALENVS=1 pipenv requirements > requirements.new.txt
+
+# Compare with the existing requirements.txt
+if [ -f "requirements.txt" ]; then
+  if ! diff -q requirements.txt requirements.new.txt &>/dev/null; then
+    display "Changes detected in requirements.txt!"
+    display "Please review the differences:"
+    diff requirements.txt requirements.new.txt || true
+    display "Commit the changes to requirements.txt before continuing."
+    exit 1
+  else
+    mv requirements.new.txt requirements.txt
+  fi
+fi
+
+# Install Python dependencies from the updated requirements.txt
+display "Installing Python dependencies from requirements.txt"
+pip install --upgrade -r requirements.txt
+
+display "Bootstrap complete. Use 'source ${venv_dir}/bin/activate' to activate the environment."
 
 # vim: ft=sh:
