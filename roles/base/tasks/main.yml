@@ -29,22 +29,14 @@
     - brew
     - base-brew
 
-#- name: Install brew cask applications
-#  command: "brew install {{item.install_options | default('') }} {{ item.name }}"
-#  # TODO: Figure out "Error no cask hydra" issue
-#  # homebrew_cask:
-#  #   name: "{{ item.name }}"
-#  #   state: "{{ item.state | default('present') }}"
-#  #   install_options: "{{ item.install_options | default('') }}"
-#  # community.general.homebrew_cask:
-#  #   state: "{{ item.state | default('present') }}"
-#  #   install_options: "{{ item.install_options | default('') }}"
-#  with_items: "{{ brew_cask_applications }}"
-#  ignore_errors: True
-#  tags:
-#    - base
-#    - brew
-#    - brew-cask
+- name: Install brew cask applications
+  command: "brew install {{item.install_options | default('') }} {{ item.name }}"
+  with_items: "{{ brew_cask_applications }}"
+  ignore_errors: True
+  tags:
+    - base
+    - brew
+    - brew-cask
 
 - name: Cleanup homebrew
   command: "brew cleanup -s"

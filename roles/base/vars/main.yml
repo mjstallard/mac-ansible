@@ -81,7 +81,7 @@ brew_cask_applications:
 #  - name: atom
 #  - name: bartender
 #  - name: caffeine
-#  - name: firefox
+  - name: firefox
 #  - name: firefox-developer-edition
 #  - name: flux
 #  - name: google-chrome
@@ -94,7 +94,7 @@ brew_cask_applications:
 #  - name: keybase
 #  - name: little-snitch
 #  - name: nordvpn
-#  - name: spotify
+  - name: spotify
 #  - name: sublime-text
 #  - name: the-unarchiver
 #  - name: tor-browser
