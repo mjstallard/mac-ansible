@@ -1,14 +1,28 @@
 #!/usr/bin/env bash
 #
-#
+# Provision script for Ansible playbooks
 #
 
-PATH=/usr/local/bin:$PATH
-version=`python3 --version | awk '{ print $2 }'`
-major=`echo $version | cut -d. -f1`
-minor=`echo $version | cut -d. -f2`
-PATH=/usr/local/opt/python/libexec/bin:$PATH
-PATH=$HOME/Library/Python/${major}.${minor}/bin/:$PATH
-time ansible-playbook -K --diff $@
+# Ensure correct PATHs
+PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
+
+# Activate the virtual environment
+venv_dir="ansible_venv"
+if [ -d "$venv_dir" ]; then
+    # shellcheck disable=SC1091
+    source "${venv_dir}/bin/activate"
+else
+    echo "Error: Virtual environment not found in ${venv_dir}. Please run the bootstrap script first."
+    exit 1
+fi
+
+# Get Python version details (not strictly necessary here but retained)
+version=$(python3 --version | awk '{ print $2 }')
+major=$(echo $version | cut -d. -f1)
+minor=$(echo $version | cut -d. -f2)
+PATH=$HOME/Library/Python/${major}.${minor}/bin:$PATH
+
+# Run the Ansible playbook
+time ansible-playbook --diff "$@"
 
 # vim: ft=sh:
