@@ -86,6 +86,7 @@ brew_cask_applications:
   - name: firefox
 #  - name: firefox-developer-edition
 #  - name: flux
+  - name: ghostty
 #  - name: google-chrome
 #  # TODO: Requires password, become sudo
 #  - name: gpg-suite
