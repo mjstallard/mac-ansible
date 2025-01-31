@@ -8,6 +8,14 @@
     - brew-cask
     - update
 
+- name: Upgrade homebrew
+  command: "brew upgrade"
+  tags:
+    - base
+    - brew
+    - brew-cask
+    - upgrade
+  
 #- name: Install brew taps
 #  homebrew_tap:
 #    name: "{{ item.name }}"
