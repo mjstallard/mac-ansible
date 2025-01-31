@@ -76,6 +76,7 @@ brew_base_packages:
 #  - name: wget
 #  - name: yarn
 brew_cask_applications:
+  - name: 1password
 #  - name: alfred
 #  - name: appzapper
 #  - name: arduino
