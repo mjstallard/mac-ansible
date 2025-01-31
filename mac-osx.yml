@@ -17,7 +17,7 @@
 #        KERL_CONFIGURE_OPTION: --without-javac
 #        KERL_USE_AUTOCONF: "yes"
 #    - elixir
-#    - golang
+    - golang
 #    - rust
 #    - nodejs
 #    - python
