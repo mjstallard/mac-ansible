@@ -36,6 +36,7 @@ brew_base_packages:
 #  - name: hashicorp/tap/waypoint
 #  - name: heroku
 #  - name: hub
+  - name: hugo
 #  - name: inetutils
 #  - name: jenv
   - name: jq
