@@ -8,6 +8,7 @@ brew_base_packages:
 #  - name: bash-completion
 #  - name: bat
 #  - name: bazaar
+  - name: cc65
 #  - name: certbot
 #  - name: cmake
 #  - name: coreutils
@@ -72,6 +73,7 @@ brew_base_packages:
 #  - name: tmate
 #  - name: tree
 #  - name: vault
+  - name: vice
 #  - name: watchman
 #  - name: wget
 #  - name: yarn
