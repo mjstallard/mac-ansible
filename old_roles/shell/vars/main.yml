@@ -1,5 +1,0 @@
----
-
-shell_brew_packages:
-  - name: autojump
-  - name: fish

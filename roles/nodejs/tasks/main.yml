@@ -11,21 +11,21 @@
     - brew
 
 - name: Check for nodejs plugin
-  command: "asdf plugin-list"
+  command: "asdf plugin list"
   register: asdf_plugins
   tags:
     - nodejs
     - asdf-plugin
 
 - name: Add asdf nodejs plugin
-  command: "asdf plugin-add nodejs"
+  command: "asdf plugin add nodejs"
   when: "'nodejs' not in asdf_plugins.stdout"
   tags:
     - nodejs
     - asdf-plugin
 
 - name: Update asdf nodejs plugin
-  command: "asdf plugin-update nodejs"
+  command: "asdf plugin update nodejs"
   tags:
     - nodejs
     - asdf-plugin

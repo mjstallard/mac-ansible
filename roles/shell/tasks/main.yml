@@ -10,5 +10,5 @@
     - brew
     - shell
 
-- include: fish.yml
+- include_tasks: fish.yml
   when: shell_use_fish == True

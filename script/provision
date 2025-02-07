@@ -23,6 +23,6 @@ minor=$(echo $version | cut -d. -f2)
 PATH=$HOME/Library/Python/${major}.${minor}/bin:$PATH
 
 # Run the Ansible playbook
-time ansible-playbook --diff "$@"
+time ansible-playbook --diff --ask-become-pass "$@"
 
 # vim: ft=sh:

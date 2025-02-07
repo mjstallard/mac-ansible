@@ -2,6 +2,8 @@
 
 brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
 brew_base_packages:
+  - name: artginzburg/tap/sudo-touchid
+  - name: asdf
 #  - name: autoconf
 #  - name: automake
 #  - name: bash
@@ -116,6 +118,7 @@ brew_cask_applications:
 #  - name: vlc
 #  - name: whatsapp
 brew_taps:
+  - name: artginzburg/tap
 #  - name: git-duet/tap
 #  - name: homebrew/cask-versions
 #  - name: heroku/brew

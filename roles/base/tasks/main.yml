@@ -16,15 +16,15 @@
     - brew-cask
     - upgrade
   
-#- name: Install brew taps
-#  homebrew_tap:
-#    name: "{{ item.name }}"
-#    state: "{{ item.state | default('present') }}"
-#  with_items: "{{ brew_taps }}"
-#  tags:
-#    - base
-#    - brew
-#    - brew-tap
+- name: Install brew taps
+  homebrew_tap:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ brew_taps }}"
+  tags:
+    - base
+    - brew
+    - brew-tap
 
 - name: Install base homebrew packages
   homebrew:
@@ -37,10 +37,16 @@
     - brew
     - base-brew
 
+- name: Start base homebrew services as root
+  command: echo "please run sudo /opt/homebrew/bin/brew services start sudo-touchid"
+  tags:
+    - brew
+
 - name: Install brew cask applications
-  command: "brew install {{item.install_options | default('') }} {{ item.name }}"
-  with_items: "{{ brew_cask_applications }}"
-  ignore_errors: True
+  homebrew_cask:
+    name: "{{ item.name }}"
+    state: present  # Ensures it's installed but won't reinstall if already there
+  loop: "{{ brew_cask_applications }}"
   tags:
     - base
     - brew
