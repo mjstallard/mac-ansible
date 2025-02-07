@@ -19,6 +19,6 @@
 #    - elixir
     - golang
 #    - rust
-#    - nodejs
+    - nodejs
 #    - python
 #    - docker
