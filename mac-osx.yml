@@ -8,7 +8,7 @@
 #    - shell
 #    - tmux
 #    - asdf
-#    - dotfiles
+    - dotfiles
 #    - vimfiles
 #    - ruby
 #    - erlang
