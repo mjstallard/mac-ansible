@@ -7,7 +7,7 @@
     - base
 #    - shell
 #    - tmux
-#    - asdf
+    - asdf
     - dotfiles
 #    - vimfiles
 #    - ruby
