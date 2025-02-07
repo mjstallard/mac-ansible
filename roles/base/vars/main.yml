@@ -117,6 +117,7 @@ brew_cask_applications:
 #  - name: vmware-fusion
 #  - name: vlc
 #  - name: whatsapp
+  - name: zoom
 brew_taps:
   - name: artginzburg/tap
 #  - name: git-duet/tap
