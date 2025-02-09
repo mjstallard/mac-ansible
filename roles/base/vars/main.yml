@@ -65,7 +65,7 @@ brew_base_packages:
 #  - name: protobuf
 #  - name: reattach-to-user-namespace
 #  - name: readline
-#  - name: ripgrep
+  - name: ripgrep
 #  - name: s3cmd
 #  - name: snappy
 #  - name: sqlite
