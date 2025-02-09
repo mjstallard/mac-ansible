@@ -104,6 +104,7 @@ brew_cask_applications:
 #  - name: keybase
 #  - name: little-snitch
 #  - name: nordvpn
+  - name: sonos
   - name: spotify
 #  - name: sublime-text
 #  - name: the-unarchiver
