@@ -54,6 +54,7 @@ brew_base_packages:
 #  - name: libyaml
 #  - name: lorem
 #  - name: lua
+  - name: lua-language-server
 #  - name: makedepend
 #  - name: memcached
 #  - name: mercurial
