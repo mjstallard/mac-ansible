@@ -80,3 +80,16 @@
     state: directory
   tags:
     - base
+
+- name: Set macOS keyboard repeat settings
+  community.general.osx_defaults:
+    domain: -g
+    key: "{{ item.key }}"
+    type: int
+    value: "{{ item.value }}"
+  loop:
+    - { key: "InitialKeyRepeat", value: 10 }
+    - { key: "KeyRepeat", value: 1 }
+  become: true
+  tags:
+    - base
