@@ -81,6 +81,7 @@ brew_base_packages:
 #  - name: watchman
 #  - name: wget
 #  - name: yarn
+  - name: zoxide
 brew_cask_applications:
   - name: 1password
 #  - name: alfred
