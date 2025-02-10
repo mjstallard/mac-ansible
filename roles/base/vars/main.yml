@@ -4,6 +4,7 @@ brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Home
 brew_base_packages:
   - name: artginzburg/tap/sudo-touchid
   - name: asdf
+  - name: atuin
 #  - name: autoconf
 #  - name: automake
 #  - name: bash
@@ -18,13 +19,14 @@ brew_base_packages:
 #  - name: ctags
 #  - name: curl
 #  - name: direnv
+  - name: eza
 #  - name: exercism
 #  - name: findutils
 #  - name: fn
 #  - name: fontconfig
 #  - name: freetype
 #  - name: fswatch
-#  - name: fzf
+  - name: fzf
 #  - name: gettext
 #  - name: git
 #  - name: git-duet
