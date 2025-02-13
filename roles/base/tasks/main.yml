@@ -1,5 +1,4 @@
 ---
-
 - name: Update homebrew
   command: "brew update"
   tags:
@@ -15,7 +14,7 @@
     - brew
     - brew-cask
     - upgrade
-  
+
 - name: Install brew taps
   homebrew_tap:
     name: "{{ item.name }}"
@@ -45,7 +44,7 @@
 - name: Install brew cask applications
   homebrew_cask:
     name: "{{ item.name }}"
-    state: present  # Ensures it's installed but won't reinstall if already there
+    state: present # Ensures it's installed but won't reinstall if already there
   loop: "{{ brew_cask_applications }}"
   tags:
     - base

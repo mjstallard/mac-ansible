@@ -1,5 +1,4 @@
 ---
-
 - name: Install golang via homebrew
   homebrew:
     name: go

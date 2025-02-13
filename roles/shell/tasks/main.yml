@@ -1,5 +1,4 @@
 ---
-
 - name: Install base homebrew packages
   homebrew:
     name: "{{ item.name }}"

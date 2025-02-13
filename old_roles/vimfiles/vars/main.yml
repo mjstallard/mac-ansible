@@ -1,5 +1,4 @@
 ---
-
 vimfiles_repo: "git@github.com:mtchavez/vimfiles.git"
 vimfiles_dir: "{{ workspace_dir }}/vimfiles"
 vimfiles_install_cmd: "./install.sh -u"

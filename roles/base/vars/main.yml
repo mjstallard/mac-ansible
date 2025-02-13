@@ -1,80 +1,80 @@
 ---
-
-brew_install_cmd: "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+brew_install_cmd: 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 brew_base_packages:
   - name: artginzburg/tap/sudo-touchid
   - name: asdf
   - name: atuin
   - name: autoconf
   - name: automake
-#  - name: bash
-#  - name: bash-completion
-#  - name: bat
-#  - name: bazaar
+  #  - name: bash
+  #  - name: bash-completion
+  #  - name: bat
+  #  - name: bazaar
   - name: cc65
-#  - name: certbot
-#  - name: cmake
-#  - name: coreutils
-#  - name: cscope
-#  - name: ctags
-#  - name: curl
-#  - name: direnv
+  #  - name: certbot
+  #  - name: cmake
+  #  - name: coreutils
+  #  - name: cscope
+  #  - name: ctags
+  #  - name: curl
+  #  - name: direnv
   - name: eza
-#  - name: exercism
-#  - name: findutils
-#  - name: fn
-#  - name: fontconfig
-#  - name: freetype
-#  - name: fswatch
+  #  - name: exercism
+  #  - name: findutils
+  #  - name: fn
+  #  - name: fontconfig
+  #  - name: freetype
+  #  - name: fswatch
   - name: fzf
-#  - name: gettext
-#  - name: git
-#  - name: git-duet
-#  - name: git-extras
-#  - name: git-lfs
-#  - name: git-secrets
+  #  - name: gettext
+  #  - name: git
+  #  - name: git-duet
+  #  - name: git-extras
+  #  - name: git-lfs
+  #  - name: git-secrets
   - name: gmp
-#  - name: goenv
-#  - name: gnu-sed
-#  - name: gnu-tar
-#  - name: graphviz
-#  - name: hadolint
-#  - name: hashicorp/tap/waypoint
-#  - name: heroku
-#  - name: hub
+  #  - name: goenv
+  #  - name: gnu-sed
+  #  - name: gnu-tar
+  #  - name: graphviz
+  #  - name: hadolint
+  #  - name: hashicorp/tap/waypoint
+  #  - name: heroku
+  #  - name: hub
   - name: hugo
-#  - name: inetutils
-#  - name: jenv
+  #  - name: inetutils
+  #  - name: jenv
   - name: jq
-#  - name: kubectl
-#  - name: libevent
-#  - name: libffi
-#  - name: libidn
-#  - name: libmemcached
-#  - name: libmpc
-#  - name: libpng
-#  - name: libxml2
+  #  - name: kubectl
+  #  - name: libevent
+  #  - name: libffi
+  #  - name: libidn
+  #  - name: libmemcached
+  #  - name: libmpc
+  #  - name: libpng
+  #  - name: libxml2
   - name: libyaml
-#  - name: lorem
-#  - name: lua
+  #  - name: lorem
+  #  - name: lua
   - name: lua-language-server
-#  - name: makedepend
-#  - name: memcached
-#  - name: mercurial
-#  - name: moreutils
+  #  - name: makedepend
+  #  - name: memcached
+  #  - name: mercurial
+  #  - name: moreutils
   - name: neovim
-#  - name: nomad
-#  - name: opam
+  #  - name: nomad
+  #  - name: opam
   - name: openssl
     #  - name: packer
-#  - name: protobuf
-#  - name: reattach-to-user-namespace
-#  - name: readline
+  - name: prettier
+  #  - name: protobuf
+  #  - name: reattach-to-user-namespace
+  #  - name: readline
   - name: ripgrep
-#  - name: s3cmd
+  #  - name: s3cmd
   - name: shellcheck
-#  - name: snappy
-#  - name: sqlite
+  #  - name: snappy
+  #  - name: sqlite
   - name: starship
   - name: stylua
   - name: synchronal/tap/medic
@@ -86,61 +86,61 @@ brew_base_packages:
   - name: synchronal/tap/medic-ext-tool-versions
   - name: synchronal/tap/medic-ext-postgres
   - name: taplo
-#  - name: terraform
-#  - name: thefuck
-#  - name: the_silver_searcher
-#  - name: tmate
-#  - name: tree
-#  - name: vault
+  #  - name: terraform
+  #  - name: thefuck
+  #  - name: the_silver_searcher
+  #  - name: tmate
+  #  - name: tree
+  #  - name: vault
   - name: vice
-#  - name: watchman
-#  - name: wget
-#  - name: yarn
+  #  - name: watchman
+  #  - name: wget
+  #  - name: yarn
   - name: yamllint
   - name: zoxide
 brew_cask_applications:
   - name: 1password
-#  - name: alfred
-#  - name: appzapper
-#  - name: arduino
-#  - name: atom
-#  - name: bartender
-#  - name: caffeine
+  #  - name: alfred
+  #  - name: appzapper
+  #  - name: arduino
+  #  - name: atom
+  #  - name: bartender
+  #  - name: caffeine
   - name: chatgpt
   - name: firefox
-#  - name: firefox-developer-edition
-#  - name: flux
+  #  - name: firefox-developer-edition
+  #  - name: flux
   - name: ghostty
-#  - name: google-chrome
-#  # TODO: Requires password, become sudo
-#  - name: gpg-suite
-#  - name: imagealpha
-#  - name: imageoptim
-#  - name: istat-menus
-#  - name: iterm2
-#  - name: keybase
-#  - name: little-snitch
-#  - name: nordvpn
+  #  - name: google-chrome
+  #  # TODO: Requires password, become sudo
+  #  - name: gpg-suite
+  #  - name: imagealpha
+  #  - name: imageoptim
+  #  - name: istat-menus
+  #  - name: iterm2
+  #  - name: keybase
+  #  - name: little-snitch
+  #  - name: nordvpn
   - name: sonos
   - name: spotify
-#  - name: sublime-text
-#  - name: the-unarchiver
-#  - name: tor-browser
-#  - name: tunnelblick
-#  - name: tuple
-#  - name: vagrant
-#  # NOTE: has needs for Apple silicon
+  #  - name: sublime-text
+  #  - name: the-unarchiver
+  #  - name: tor-browser
+  #  - name: tunnelblick
+  #  - name: tuple
+  #  - name: vagrant
+  #  # NOTE: has needs for Apple silicon
   # - name: virtualbox
-#  - name: viscosity
-#  - name: visual-studio-code
-#  - name: vmware-fusion
-#  - name: vlc
-#  - name: whatsapp
+  #  - name: viscosity
+  #  - name: visual-studio-code
+  #  - name: vmware-fusion
+  #  - name: vlc
+  #  - name: whatsapp
   - name: zoom
 brew_taps:
   - name: artginzburg/tap
-#  - name: git-duet/tap
-#  - name: homebrew/cask-versions
-#  - name: heroku/brew
-#  - name: hashicorp/tap
+  #  - name: git-duet/tap
+  #  - name: homebrew/cask-versions
+  #  - name: heroku/brew
+  #  - name: hashicorp/tap
   - name: synchronal/tap

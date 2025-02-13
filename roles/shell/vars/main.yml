@@ -1,4 +1,3 @@
 ---
-
 shell_brew_packages:
-   - name: fish
+  - name: fish

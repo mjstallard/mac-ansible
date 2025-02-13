@@ -1,5 +1,4 @@
 ---
-
 gopath_dir: "{{ home_dir }}/go"
 golang_default_packages:
   # Golang tools

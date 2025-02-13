@@ -1,5 +1,4 @@
 ---
-
 ruby_global_version: "3.4.1"
 ruby_default_gems_file: "{{ home_dir + '/.default-gems' }}"
 ruby_versions:

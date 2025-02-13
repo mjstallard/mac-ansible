@@ -1,5 +1,4 @@
 ---
-
 tmux_brew_packages:
   - name: tmux
   - name: "reattach-to-user-namespace"

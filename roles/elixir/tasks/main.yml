@@ -1,5 +1,4 @@
 ---
-
 - name: Check for elixir plugin
   command: "asdf plugin list"
   register: asdf_plugins

@@ -1,15 +1,14 @@
 ---
-
 - hosts: localhost
   connection: local
   gather_facts: false
   roles:
     - base
     - shell
-#    - tmux
+    #    - tmux
     - asdf
     - dotfiles
-#    - vimfiles
+    #    - vimfiles
     #    - ruby
     - erlang
     - role: erlang
@@ -18,7 +17,7 @@
         KERL_USE_AUTOCONF: "yes"
     - elixir
     - golang
-#    - rust
+    #    - rust
     - nodejs
 #    - python
 #    - docker

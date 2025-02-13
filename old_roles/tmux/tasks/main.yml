@@ -1,5 +1,4 @@
 ---
-
 - name: Install tmux homebrew packages
   homebrew:
     name: "{{ item.name }}"
@@ -19,4 +18,3 @@
   tags:
     - tmux
     - tmux-plugins
-

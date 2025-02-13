@@ -1,3 +1,2 @@
 ---
-
 asdf_global_config: "{{ home_dir }}/.asdfrc"

@@ -16,7 +16,6 @@
   tags:
     - shell
     - fish
-
 #- name: Install fisherman config
 #  get_url:
 #    url: "{{ shell_fisherman_url }}"

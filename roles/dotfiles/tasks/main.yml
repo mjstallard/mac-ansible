@@ -1,5 +1,4 @@
 ---
-
 - name: Get dotfiles repo
   git:
     repo: "{{ dotfiles_repo }}"

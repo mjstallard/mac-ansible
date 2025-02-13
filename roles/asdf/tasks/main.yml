@@ -1,5 +1,4 @@
 ---
-
 - name: Add global asdf config
   template:
     src: asdfrc.j2
