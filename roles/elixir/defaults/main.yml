@@ -1,7 +1,6 @@
 ---
 
-elixir_global_version: 1.7.2
+elixir_global_version: 1.18.2
 elixir_versions:
   - "{{ elixir_global_version }}"
-  - 1.6.5
 

@@ -11,14 +11,14 @@
     - brew
 
 - name: Check for erlang plugin
-  command: "asdf plugin-list"
+  command: "asdf plugin list"
   register: asdf_plugins
   tags:
     - erlang
     - asdf-plugin
 
 - name: Add asdf erlang plugin
-  command: "asdf plugin-add erlang"
+  command: "asdf plugin add erlang"
   when: "'erlang' not in asdf_plugins.stdout"
   tags:
     - erlang

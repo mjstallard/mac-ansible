@@ -1,6 +1,6 @@
 ---
 
-erlang_global_version: 23.3.4
+erlang_global_version: 27.2.2
 erlang_versions:
   - "{{ erlang_global_version }}"
 erlang_brew_packages:
@@ -8,4 +8,4 @@ erlang_brew_packages:
   - wxwidgets
   - libxslt
   - fop
-  - wxmac
+  #  - wxmac

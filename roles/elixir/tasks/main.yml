@@ -1,14 +1,14 @@
 ---
 
 - name: Check for elixir plugin
-  command: "asdf plugin-list"
+  command: "asdf plugin list"
   register: asdf_plugins
   tags:
     - elixir
     - asdf-plugin
 
 - name: Add asdf elixir plugin
-  command: "asdf plugin-add elixir"
+  command: "asdf plugin add elixir"
   when: "'elixir' not in asdf_plugins.stdout"
   tags:
     - elixir
