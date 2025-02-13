@@ -5,8 +5,8 @@ brew_base_packages:
   - name: artginzburg/tap/sudo-touchid
   - name: asdf
   - name: atuin
-#  - name: autoconf
-#  - name: automake
+  - name: autoconf
+  - name: automake
 #  - name: bash
 #  - name: bash-completion
 #  - name: bat
@@ -33,6 +33,7 @@ brew_base_packages:
 #  - name: git-extras
 #  - name: git-lfs
 #  - name: git-secrets
+  - name: gmp
 #  - name: goenv
 #  - name: gnu-sed
 #  - name: gnu-tar
@@ -53,7 +54,7 @@ brew_base_packages:
 #  - name: libmpc
 #  - name: libpng
 #  - name: libxml2
-#  - name: libyaml
+  - name: libyaml
 #  - name: lorem
 #  - name: lua
   - name: lua-language-server
@@ -64,15 +65,27 @@ brew_base_packages:
   - name: neovim
 #  - name: nomad
 #  - name: opam
-#  - name: packer
+  - name: openssl
+    #  - name: packer
 #  - name: protobuf
 #  - name: reattach-to-user-namespace
 #  - name: readline
   - name: ripgrep
 #  - name: s3cmd
+  - name: shellcheck
 #  - name: snappy
 #  - name: sqlite
   - name: starship
+  - name: stylua
+  - name: synchronal/tap/medic
+  - name: synchronal/tap/medic-ext-elixir
+  - name: synchronal/tap/medic-ext-git
+  - name: synchronal/tap/medic-ext-homebrew
+  - name: synchronal/tap/medic-ext-node
+  - name: synchronal/tap/medic-ext-rust
+  - name: synchronal/tap/medic-ext-tool-versions
+  - name: synchronal/tap/medic-ext-postgres
+  - name: taplo
 #  - name: terraform
 #  - name: thefuck
 #  - name: the_silver_searcher
@@ -83,6 +96,7 @@ brew_base_packages:
 #  - name: watchman
 #  - name: wget
 #  - name: yarn
+  - name: yamllint
   - name: zoxide
 brew_cask_applications:
   - name: 1password
@@ -129,3 +143,4 @@ brew_taps:
 #  - name: homebrew/cask-versions
 #  - name: heroku/brew
 #  - name: hashicorp/tap
+  - name: synchronal/tap
