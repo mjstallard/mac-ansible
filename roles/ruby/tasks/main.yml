@@ -1,14 +1,14 @@
 ---
 
 - name: Check for ruby plugin
-  command: "asdf plugin-list"
+  command: "asdf plugin list"
   register: asdf_plugins
   tags:
     - ruby
     - asdf-plugin
 
 - name: Add asdf ruby plugin
-  command: "asdf plugin-add ruby"
+  command: "asdf plugin add ruby"
   when: "'ruby' not in asdf_plugins.stdout"
   tags:
     - ruby
