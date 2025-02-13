@@ -1,0 +1,35 @@
+[doctor]
+checks = [
+  {check = "homebrew"}
+]
+
+# Uncomment and add if needed
+# {check = "tool-versions", command = "plugin-installed", args = {plugin = "my language"}}
+# {check = "tool-versions", command = "package-installed", args = {plugin = "my language"}}
+
+[test]
+checks = [
+  # {name = "Run tests", shell = "run my test suite"}
+]
+
+[audit]
+checks = [
+  {name = "Format yaml files", shell = "yamllint .config/**/*.yaml"}
+]
+
+[outdated]
+checks = []
+
+[update]
+steps = [
+  { step = "git", command = "pull" },
+  { doctor = {} }
+]
+
+[shipit]
+steps = [
+  { audit = {} },
+  { update = {} },
+  { test = {} },
+  { step = "git", command = "push" }
+]
