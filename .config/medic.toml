@@ -15,6 +15,7 @@ checks = [
 [audit]
 checks = [
   {name = "Format scripts", shell = "shellcheck script/*"},
+  {name = "Format toml files", shell = "taplo lint ansible.cfg"},
   {name = "Format yaml files", shell = "find . -type f -name \"*.yml\" -not -path \"./ansible_venv/*\" -print0 | xargs -0 prettier -c"}
 ]
 
