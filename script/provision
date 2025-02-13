@@ -18,9 +18,9 @@ fi
 
 # Get Python version details (not strictly necessary here but retained)
 version=$(python3 --version | awk '{ print $2 }')
-major=$(echo $version | cut -d. -f1)
-minor=$(echo $version | cut -d. -f2)
-PATH=$HOME/Library/Python/${major}.${minor}/bin:$PATH
+major=$(echo "$version" | cut -d. -f1)
+minor=$(echo "$version" | cut -d. -f2)
+PATH=$HOME/Library/Python/"${major}.${minor}"/bin:$PATH
 
 # Run the Ansible playbook
 time ansible-playbook --diff --ask-become-pass "$@"
