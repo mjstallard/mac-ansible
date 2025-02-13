@@ -14,7 +14,7 @@ checks = [
 
 [audit]
 checks = [
-  {name = "Format yaml files", shell = "yamllint .config/**/*.yaml"}
+  {name = "Format yaml files", shell = "find . -type f -name \"*.yml\" -not -path \"./ansible_venv/*\" -print0 | xargs -0 prettier -c"}
 ]
 
 [outdated]
