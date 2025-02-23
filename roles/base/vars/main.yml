@@ -91,6 +91,7 @@ brew_base_packages:
   #  - name: the_silver_searcher
   #  - name: tmate
   #  - name: tree
+  - name: tmux
   #  - name: vault
   - name: vice
   #  - name: watchman
