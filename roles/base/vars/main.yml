@@ -125,6 +125,7 @@ brew_cask_applications:
   - name: sonos
   - name: spotify
   #  - name: sublime-text
+  - name: telegram
   #  - name: the-unarchiver
   #  - name: tor-browser
   #  - name: tunnelblick
