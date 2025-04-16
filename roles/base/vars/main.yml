@@ -11,7 +11,6 @@ brew_base_packages:
   #  - name: bat
   #  - name: bazaar
   - name: cc65
-  - name: certbot
   #  - name: cmake
   #  - name: coreutils
   #  - name: cscope

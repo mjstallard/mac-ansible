@@ -9,11 +9,33 @@
     - python
     - brew
 
+- name: Install pipx
+  homebrew:
+    name: pipx
+    state: latest
+  tags:
+    - python
+
 - name: Install python packages
   pip:
     name: "{{ python_packages }}"
     state: latest
     executable: pip3
+  tags:
+    - python
+
+- name: Install (or upgrade) Certbot in pipx
+  command: >
+    pipx install certbot --force
+  args:
+    # only run if the venv is missing
+    creates: "{{ lookup('env','HOME') }}/.local/pipx/venvs/certbot"
+  tags:
+    - python
+
+- name: Inject Gandi DNS plugin into Certbot venv
+  command: >
+    pipx inject certbot certbot-dns-gandi --include-deps --force
   tags:
     - python
 
