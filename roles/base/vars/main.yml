@@ -20,6 +20,7 @@ brew_base_packages:
   #  - name: direnv
   - name: eza
   #  - name: exercism
+  - name: ffmpeg
   #  - name: findutils
   #  - name: fn
   #  - name: fontconfig
