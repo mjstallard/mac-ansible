@@ -33,7 +33,7 @@
     - asdf-plugin
 
 - name: Set global erlang version
-  command: "asdf global erlang {{ erlang_global_version }}"
+  command: "asdf set -u erlang {{ erlang_global_version }}"
   tags:
     - erlang
     - asdf-plugin

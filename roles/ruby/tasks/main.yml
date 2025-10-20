@@ -33,7 +33,7 @@
     - asdf-plugin
 
 - name: Set global ruby version
-  command: "asdf global ruby {{ ruby_global_version }}"
+  command: "asdf set -u ruby {{ ruby_global_version }}"
   tags:
     - ruby
     - asdf-plugin

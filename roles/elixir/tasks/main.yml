@@ -23,7 +23,7 @@
     - asdf-plugin
 
 - name: Set global elixir version
-  command: "asdf global elixir {{ elixir_global_version }}"
+  command: "asdf set -u elixir {{ elixir_global_version }}"
   tags:
     - elixir
     - asdf-plugin

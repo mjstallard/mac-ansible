@@ -39,7 +39,7 @@
     - asdf-plugin
 
 - name: Set global nodejs version
-  command: "asdf global nodejs {{ nodejs_global_version }}"
+  command: "asdf set -u nodejs {{ nodejs_global_version }}"
   tags:
     - nodejs
     - asdf-plugin
