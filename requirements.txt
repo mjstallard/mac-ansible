@@ -1,6 +1,6 @@
 -i https://pypi.python.org/simple
-ansible==8.7.0; python_version >= '3.9'
-ansible-core==2.15.13; python_version >= '3.9'
+ansible==12.1.0
+ansible-core==2.19.3
 boto==2.49.0
 cffi==2.0.0; python_version >= '3.9'
 cryptography==46.0.3; python_version >= '3.8' and python_full_version not in '3.9.0, 3.9.1'
