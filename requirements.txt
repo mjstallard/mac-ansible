@@ -1,12 +1,14 @@
 -i https://pypi.python.org/simple
-ansible==11.2.0; python_version >= '3.11'
-ansible-core==2.18.2; python_version >= '3.11'
+ansible==8.7.0; python_version >= '3.9'
+ansible-core==2.15.13; python_version >= '3.9'
 boto==2.49.0
-cffi==1.17.1; python_version >= '3.8'
-cryptography==44.0.0; python_version >= '3.7' and python_full_version not in '3.9.0, 3.9.1'
-jinja2==3.1.5; python_version >= '3.7'
-markupsafe==3.0.2; python_version >= '3.9'
-packaging==24.2; python_version >= '3.8'
-pycparser==2.22; python_version >= '3.8'
-pyyaml==6.0.2; python_version >= '3.8'
+cffi==2.0.0; python_version >= '3.9'
+cryptography==46.0.3; python_version >= '3.8' and python_full_version not in '3.9.0, 3.9.1'
+importlib-resources==5.0.7; python_version >= '3.6'
+jinja2==3.1.6; python_version >= '3.7'
+markupsafe==3.0.3; python_version >= '3.9'
+packaging==25.0; python_version >= '3.8'
+pycparser==2.23; python_version >= '3.8'
+pyyaml==6.0.3; python_version >= '3.8'
 resolvelib==1.0.1
+typing-extensions==4.15.0; python_version >= '3.9'
