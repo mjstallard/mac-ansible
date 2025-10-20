@@ -65,7 +65,6 @@ brew_base_packages:
   #  - name: moreutils
   - name: neovim
   #  - name: nomad
-  #  - name: opam
   - name: openssl
     #  - name: packer
   - name: prettier
