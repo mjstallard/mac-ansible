@@ -128,6 +128,7 @@ brew_cask_applications:
   #  - name: little-snitch
   #  - name: nordvpn
   - name: rectangle-pro
+  - name: rubymine
   - name: sonos
   - name: spotify
   #  - name: sublime-text
