@@ -1,6 +1,7 @@
 ---
 brew_install_cmd: 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 brew_base_packages:
+  - name: 1password-cli
   - name: artginzburg/tap/sudo-touchid
   - name: asdf
   - name: atuin
