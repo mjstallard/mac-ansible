@@ -91,10 +91,11 @@ brew_base_packages:
   #  - name: thefuck
   #  - name: the_silver_searcher
   #  - name: tmate
-  #  - name: tree
+  - name: tree
   - name: tmux
   #  - name: vault
   - name: vice
+  - name: viu
   #  - name: watchman
   #  - name: wget
   #  - name: yarn
