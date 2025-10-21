@@ -9,7 +9,7 @@
     - asdf
     - dotfiles
     #    - vimfiles
-    #    - ruby
+    - ruby
     - erlang
     - role: erlang
       environment:
