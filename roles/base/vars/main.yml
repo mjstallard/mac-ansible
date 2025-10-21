@@ -129,6 +129,7 @@ brew_cask_applications:
   #  - name: keybase
   #  - name: little-snitch
   #  - name: nordvpn
+  - name: postgres-unofficial
   - name: rectangle-pro
   - name: rubymine
   - name: sonos
