@@ -70,6 +70,7 @@ brew_base_packages:
   #  - name: protobuf
   #  - name: reattach-to-user-namespace
   #  - name: readline
+  - name: redis
   - name: ripgrep
   #  - name: s3cmd
   - name: shellcheck
