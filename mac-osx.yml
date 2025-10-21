@@ -17,7 +17,7 @@
         KERL_USE_AUTOCONF: "yes"
     - elixir
     - golang
-    #    - rust
+    - rust
     - nodejs
     - python
-#    - docker
+#   - docker

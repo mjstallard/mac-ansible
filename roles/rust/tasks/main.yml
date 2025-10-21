@@ -1,13 +1,13 @@
 ---
 - name: Check for rust plugin
-  command: "asdf plugin-list"
+  command: "asdf plugin list"
   register: asdf_plugins
   tags:
     - rust
     - asdf-plugin
 
 - name: Add asdf rust plugin
-  command: "asdf plugin-add rust"
+  command: "asdf plugin add rust"
   when: "'rust' not in asdf_plugins.stdout"
   tags:
     - rust
@@ -23,7 +23,7 @@
     - asdf-plugin
 
 - name: Set global rust version
-  command: "asdf global rust {{ rust_global_version }}"
+  command: "asdf set -u rust {{ rust_global_version }}"
   tags:
     - rust
     - asdf-plugin
