@@ -139,7 +139,7 @@ brew_cask_applications:
   - name: telegram
   #  - name: the-unarchiver
   #  - name: tor-browser
-  #  - name: tunnelblick
+  - name: tunnelblick
   #  - name: tuple
   #  - name: vagrant
   #  # NOTE: has needs for Apple silicon
