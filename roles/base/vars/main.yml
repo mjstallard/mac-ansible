@@ -43,6 +43,7 @@ brew_base_packages:
   #  - name: hub
   - name: hudochenkov/sshpass/sshpass
   - name: hugo
+  - name: ijq
   #  - name: inetutils
   #  - name: jenv
   - name: jq
