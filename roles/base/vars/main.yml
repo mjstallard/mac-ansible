@@ -12,7 +12,7 @@ brew_base_packages:
   #  - name: bazaar
   - name: cc65
   #  - name: cmake
-  #  - name: coreutils
+  - name: coreutils
   #  - name: cscope
   #  - name: ctags
   #  - name: curl
