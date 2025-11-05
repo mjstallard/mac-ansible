@@ -121,6 +121,7 @@ brew_cask_applications:
   #  - name: flux
   - name: ghostty
   - name: google-chrome
+  - name: google-cloud-sdk
   #  # TODO: Requires password, become sudo
   #  - name: gpg-suite
   #  - name: imagealpha
