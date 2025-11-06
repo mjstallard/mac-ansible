@@ -115,6 +115,7 @@ brew_cask_applications:
   - name: chromedriver
   - name: claude
   - name: cursor
+  - name: docker-desktop
   - name: figma
   - name: firefox
   #  - name: firefox-developer-edition
