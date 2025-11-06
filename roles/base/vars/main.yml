@@ -114,6 +114,7 @@ brew_cask_applications:
   - name: chatgpt
   - name: chromedriver
   - name: claude
+  - name: codex
   - name: cursor
   - name: docker-desktop
   - name: figma
