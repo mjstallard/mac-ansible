@@ -136,6 +136,7 @@ brew_cask_applications:
   - name: obsidian
   - name: rectangle-pro
   - name: rubymine
+  - name: signal
   - name: sonos
   - name: spotify
   #  - name: sublime-text
